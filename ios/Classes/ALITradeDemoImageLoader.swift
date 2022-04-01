@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import WindmillWeaver
 import SDWebImage
 
 class ALITradeDemoImageLoader: NSObject {

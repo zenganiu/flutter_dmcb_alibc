@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import flutter_dmcb_alibc
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
