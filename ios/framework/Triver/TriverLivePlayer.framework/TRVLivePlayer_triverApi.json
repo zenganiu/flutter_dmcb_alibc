@@ -1,0 +1,21 @@
+{
+    "version": "0.0.1",
+    "registerApiExtension": [
+        {}
+    ],
+    "registerDsl": {
+        "scope": "tb",
+        "apis": [
+            {
+                "apiName": "showFloatingWindow",
+                "dslApiName": "showFloatingWindow",
+                "type": "invoke"
+            },
+            {
+                "apiName": "isShowingFloatingWindow",
+                "dslApiName": "isShowingFloatingWindow",
+                "type": "invoke"
+            }
+        ]
+    }
+}

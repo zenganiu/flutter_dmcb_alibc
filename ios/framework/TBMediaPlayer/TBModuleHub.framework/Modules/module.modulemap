@@ -1,0 +1,6 @@
+framework module TBModuleHub {
+  umbrella header "TBModuleHub.h"
+
+  export *
+  module * { export * }
+}

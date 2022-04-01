@@ -1,0 +1,6 @@
+framework module WindMix {
+  umbrella header "WindMix.h"
+
+  export *
+  module * { export * }
+}

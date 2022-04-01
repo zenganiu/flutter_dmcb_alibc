@@ -1,0 +1,6 @@
+framework module AlibcTrademiniAppContainer {
+  umbrella header "AlibcTrademiniAppContainer.h"
+
+  export *
+  module * { export * }
+}

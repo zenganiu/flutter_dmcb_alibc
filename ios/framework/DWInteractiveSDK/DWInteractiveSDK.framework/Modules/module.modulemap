@@ -1,0 +1,6 @@
+framework module DWInteractiveSDK {
+  umbrella header "DWInteractiveSDK.h"
+
+  export *
+  module * { export * }
+}

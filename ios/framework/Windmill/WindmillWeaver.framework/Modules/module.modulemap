@@ -1,0 +1,6 @@
+framework module WindmillWeaver {
+  umbrella header "WindmillWeaver.h"
+
+  export *
+  module * { export * }
+}

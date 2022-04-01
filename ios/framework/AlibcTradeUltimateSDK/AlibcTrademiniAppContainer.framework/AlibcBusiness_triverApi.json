@@ -1,0 +1,36 @@
+{
+    "version": "0.0.1",
+    "registerApiExtension": [
+        {}
+    ],
+    "registerDsl": {
+        "scope": "bc",
+        "apis": [
+            {
+                "apiName": "bcGetClickId",
+                "dslApiName": "getClickId",
+                "type": "invoke"
+            },
+            {
+                "apiName": "bcConvertUrl",
+                "dslApiName": "convertUrl",
+                "type": "invoke"
+            },
+            {
+                "apiName": "bcGetPageUrl",
+                "dslApiName": "getPageUrl",
+                "type": "invoke"
+            },
+            {
+                "apiName": "bcNotify",
+                "dslApiName": "notify",
+                "type": "invoke"
+            },
+            {
+                "apiName": "bcNavigateToOutside",
+                "dslApiName": "navigateToOutside",
+                "type": "invoke"
+            }
+        ]
+    }
+}

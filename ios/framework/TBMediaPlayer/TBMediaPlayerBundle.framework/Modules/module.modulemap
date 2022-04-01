@@ -1,0 +1,6 @@
+framework module TBMediaPlayerBundle {
+  umbrella header "TBMediaPlayerBundle.h"
+
+  export *
+  module * { export * }
+}
