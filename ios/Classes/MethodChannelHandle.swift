@@ -33,6 +33,7 @@ class MethodChannelHandle: NSObject {
         return UIViewController()
     }
 
+    /// 百川电商SDK初始化
     func initAlibc(call: FlutterMethodCall, result: @escaping FlutterResult) {
         AlibcTradeUltimateSDK.sharedInstance().asyncInit {
             WMLHandlerFactory.registerHandler(ALITradeDemoZipArchiver(), with: TRVZipArchiveProtocol.self)
@@ -41,13 +42,13 @@ class MethodChannelHandle: NSObject {
                 AlibcTradeUltimateSDK.sharedInstance().enableLocalDebug(true)
                 AlibcTradeUltimateSDK.sharedInstance().setDebugLogOpen(true)
             #endif
-            let dic = [codeKey: "00000", messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]] as [String : Any]
+            let dic: [String: Any] = [codeKey: "00000", messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]]
             result(dic)
 
         } failure: { error in
             let code = (error as NSError).code
             let msg = error.localizedDescription
-            let dic = [codeKey: "\(code)", messageKey: "百川电商SDK初始化失败: \(msg)", dataKey: ["utdid": UTDevice.utdid()]] as [String : Any]
+            let dic: [String: Any] = [codeKey: "\(code)", messageKey: "百川电商SDK初始化失败: \(msg)", dataKey: ["utdid": UTDevice.utdid()]]
             result(dic)
         }
     }
