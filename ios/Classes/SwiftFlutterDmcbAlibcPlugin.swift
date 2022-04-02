@@ -24,8 +24,11 @@ public class SwiftFlutterDmcbAlibcPlugin: NSObject, FlutterPlugin {
         } else if call.method == "getUtdid" {
             handle?.getUtdid(call, result: result)
 
-        } else if call.method == "loginOut" {
-            handle?.loginOut(call, result: result)
+        } else if call.method == "getUserInfo" {
+            handle?.getUserInfo(call, result: result)
+
+        } else if call.method == "logout" {
+            handle?.logout(call, result: result)
 
         } else if call.method == "isLogin" {
             handle?.isLogin(call, result: result)

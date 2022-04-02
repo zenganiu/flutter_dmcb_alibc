@@ -1,6 +1,8 @@
 import 'dart:async';
 import 'package:flutter/services.dart';
 
+import 'dmcb_alibc_model.dart';
+
 class FlutterDmcbAlibc {
   static const MethodChannel _channel = MethodChannel('flutter_dmcb_alibc');
 
@@ -10,15 +12,17 @@ class FlutterDmcbAlibc {
   }
 
   /// 初始化百川电商SDK
-  static Future<dynamic?> initAlibc() async {
-    var version = await _channel.invokeMethod('initAlibc');
-    return version;
+  static Future<DmcbAlibcModel> initAlibc() async {
+    final json = await _channel.invokeMethod<Map>('initAlibc');
+    final model = DmcbAlibcModel.formJson(json);
+    return model;
   }
 
   /// 授权登录
-  static Future<Map?> authLogin() async {
-    final Map? result = await _channel.invokeMethod('authLogin');
-    return result;
+  static Future<DmcbAlibcModel<DmcbAlibcUser>> authLogin() async {
+    final json = await _channel.invokeMethod<Map>('authLogin');
+    final model = DmcbAlibcModel<DmcbAlibcUser>.formJson(json);
+    return model;
   }
 
   /// 获取Utdid
@@ -28,8 +32,8 @@ class FlutterDmcbAlibc {
   }
 
   /// 退出登录
-  static void loignOut() {
-    _channel.invokeMethod('loginOut');
+  static void logout() {
+    _channel.invokeMethod('logout');
   }
 
   /// 是否已登录
@@ -38,25 +42,36 @@ class FlutterDmcbAlibc {
     return result == true;
   }
 
+  static Future<DmcbAlibcModel<DmcbAlibcUser>> getUserInfo() async {
+    final json = await _channel.invokeMethod<Map>('getUserInfo');
+    final model = DmcbAlibcModel<DmcbAlibcUser>.formJson(json);
+    return model;
+  }
+
   /// 打开商品
   ///
   /// [id] 商品id
   /// [pid] 淘客ID
   /// [relationId] 渠道id
-  static Future openByCode({
+  static Future<DmcbAlibcModel> openByCode({
     required String id,
     required String pid,
     required String relationId,
   }) async {
-    _channel.invokeMethod('openByCode', {"id": id, 'pid': pid, 'relationId': relationId});
+    final json = await _channel.invokeMethod<Map>('openByCode', {"id": id, 'pid': pid, 'relationId': relationId});
+    final model = DmcbAlibcModel.formJson(json);
+    return model;
   }
 
-  static void openByUrl({
+  static Future<DmcbAlibcModel> openByUrl({
     required String url,
     required String id,
     required String pid,
     required String relationId,
-  }) {
-    _channel.invokeMethod('openByUrl', {"url": url, "id": id, 'pid': pid, 'relationId': relationId});
+  }) async {
+    final json =
+        await _channel.invokeMethod<Map>('openByUrl', {"url": url, "id": id, 'pid': pid, 'relationId': relationId});
+    final model = DmcbAlibcModel.formJson(json);
+    return model;
   }
 }

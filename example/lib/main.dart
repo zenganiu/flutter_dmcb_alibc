@@ -26,6 +26,11 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
+
+    final result = await FlutterDmcbAlibc.initAlibc();
+    print(result);
+
+
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     // We also handle the message potentially returning null.
@@ -56,10 +61,11 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Running on: $_platformVersion\n'),
               OutlinedButton(onPressed: initAlibc, child: const Text('初始化')),
+              Text('Running on: $_platformVersion\n'),
               OutlinedButton(onPressed: hasLogin, child: const Text('是否登录')),
               OutlinedButton(onPressed: getUTdid, child: const Text('getUTdid')),
+              OutlinedButton(onPressed: getUserInfo, child: const Text('getUserInfo')),
               OutlinedButton(onPressed: login, child: const Text('登录')),
               OutlinedButton(onPressed: openByCode, child: const Text('open by code')),
               OutlinedButton(onPressed: logout, child: const Text('退出登录')),
@@ -80,6 +86,11 @@ class _MyAppState extends State<MyApp> {
     print(utdid);
   }
 
+  void getUserInfo() async {
+    final utdid = await FlutterDmcbAlibc.getUserInfo();
+    print(utdid);
+  }
+
   void hasLogin() async {
     final hasLogin = await FlutterDmcbAlibc.isLogin();
     print(hasLogin);
@@ -91,7 +102,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   void logout() async {
-    FlutterDmcbAlibc.loignOut();
+    FlutterDmcbAlibc.logout();
   }
 
   void openByCode() async {
