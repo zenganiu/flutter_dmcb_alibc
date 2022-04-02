@@ -57,7 +57,8 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Running on: $_platformVersion\n'),
-              OutlinedButton(onPressed: () {}, child: Text('登录')),
+              OutlinedButton(onPressed: initAlibc, child: Text('初始化')),
+              OutlinedButton(onPressed: login, child: Text('登录')),
               OutlinedButton(onPressed: () {}, child: Text('open by code')),
               OutlinedButton(onPressed: () {}, child: Text('退出登录')),
             ],
@@ -66,4 +67,13 @@ class _MyAppState extends State<MyApp> {
       ),
     );
   }
+
+  void initAlibc() {
+    FlutterDmcbAlibc.initAlibc();
+  }
+
+  void login(){
+
+  }
+
 }

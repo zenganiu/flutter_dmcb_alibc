@@ -11,6 +11,7 @@ import WindmillWeaver
 private let codeKey = "code"
 private let messageKey = "message"
 private let dataKey = "payload"
+private let code_success = "00000"
 
 class MethodChannelHandle: NSObject {
     private var channel: FlutterMethodChannel?
@@ -42,7 +43,7 @@ class MethodChannelHandle: NSObject {
                 AlibcTradeUltimateSDK.sharedInstance().enableLocalDebug(true)
                 AlibcTradeUltimateSDK.sharedInstance().setDebugLogOpen(true)
             #endif
-            let dic: [String: Any] = [codeKey: "00000", messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]]
+            let dic: [String: Any] = [codeKey: code_success, messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]]
             result(dic)
 
         } failure: { error in
@@ -52,6 +53,60 @@ class MethodChannelHandle: NSObject {
             result(dic)
         }
     }
+    
+    /// 淘宝授权登录
+    func authLogin(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let isLogin = loginService.isLogin()
+        if isLogin {
+            let userInfo = loginService.getUser()
+            let dict: Dictionary<String, Any> = [
+                codeKey: code_success,
+                messageKey: "success",
+                dataKey: [
+                    "nick": userInfo?.nick ?? "",
+                    "avatarUrl": userInfo?.avatarUrl ?? "",
+                    "openId": userInfo?.openId ?? "",
+                    "openSid": userInfo?.openSid ?? "",
+                    "topAccessToken": userInfo?.topAccessToken ?? "",
+                    "topAuthCode": userInfo?.topAuthCode ?? ""],
+            ]
+
+            #if DEBUG
+                print("loginTaoBao-userInfo", dict)
+            #endif
+            result(dict)
+
+        } else {
+            loginService.setH5Only(false)
+            loginService.auth(rootViewController) { userInfo in
+
+                let dict: Dictionary<String, Any> = [
+                    codeKey: code_success,
+                    messageKey: "success",
+                    dataKey: [
+                        "nick": userInfo?.nick ?? "",
+                        "avatarUrl": userInfo?.avatarUrl ?? "",
+                        "openId": userInfo?.openId ?? "",
+                        "openSid": userInfo?.openSid ?? "",
+                        "topAccessToken": userInfo?.topAccessToken ?? "",
+                        "topAuthCode": userInfo?.topAuthCode ?? ""],
+                ]
+                #if DEBUG
+                    print("loginTaoBao-userInfo", dict)
+                #endif
+
+                result(dict)
+
+            } failure: { error in
+
+                let errorCode = (error as NSError?)?.code ?? -1
+                let errorMsg = error?.localizedDescription ?? "淘宝授权登录失败"
+                let dic = [codeKey: "\(errorCode)", messageKey: errorMsg]
+                result(dic)
+            }
+        }
+    }
+    
 }
 
 // 随便定义一个数组，如果等于他就是空

@@ -16,6 +16,8 @@ public class SwiftFlutterDmcbAlibcPlugin: NSObject, FlutterPlugin {
             result("iOS " + UIDevice.current.systemVersion)
         } else if call.method == "initAlibc" {
             handle?.initAlibc(call: call, result: result)
+        } else if call.method == "login"{
+            
         }
     }
 }
