@@ -57,10 +57,12 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Running on: $_platformVersion\n'),
-              OutlinedButton(onPressed: initAlibc, child: Text('初始化')),
-              OutlinedButton(onPressed: login, child: Text('登录')),
-              OutlinedButton(onPressed: () {}, child: Text('open by code')),
-              OutlinedButton(onPressed: () {}, child: Text('退出登录')),
+              OutlinedButton(onPressed: initAlibc, child: const Text('初始化')),
+              OutlinedButton(onPressed: hasLogin, child: const Text('是否登录')),
+              OutlinedButton(onPressed: getUTdid, child: const Text('getUTdid')),
+              OutlinedButton(onPressed: login, child: const Text('登录')),
+              OutlinedButton(onPressed: openByCode, child: const Text('open by code')),
+              OutlinedButton(onPressed: logout, child: const Text('退出登录')),
             ],
           ),
         ),
@@ -68,12 +70,32 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  void initAlibc() {
-    FlutterDmcbAlibc.initAlibc();
+  void initAlibc() async {
+    final result = await FlutterDmcbAlibc.initAlibc();
+    print(result);
   }
 
-  void login(){
-
+  void getUTdid() async {
+    final utdid = await FlutterDmcbAlibc.getUtdid();
+    print(utdid);
   }
 
+  void hasLogin() async {
+    final hasLogin = await FlutterDmcbAlibc.isLogin();
+    print(hasLogin);
+  }
+
+  void login() async {
+    final userInfo = await FlutterDmcbAlibc.authLogin();
+    print(userInfo);
+  }
+
+  void logout() async {
+    FlutterDmcbAlibc.loignOut();
+  }
+
+  void openByCode() async {
+    final res = await FlutterDmcbAlibc.openByCode(
+        id: '668413008263', pid: 'mm_1460680056_2101550125_110951050292', relationId: '2763056884');
+  }
 }

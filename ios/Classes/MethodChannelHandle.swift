@@ -38,22 +38,23 @@ class MethodChannelHandle: NSObject {
     func initAlibc(call: FlutterMethodCall, result: @escaping FlutterResult) {
         AlibcTradeUltimateSDK.sharedInstance().asyncInit {
             WMLHandlerFactory.registerHandler(ALITradeDemoZipArchiver(), with: TRVZipArchiveProtocol.self)
-
-            #if DEBUG
-                AlibcTradeUltimateSDK.sharedInstance().enableLocalDebug(true)
-                AlibcTradeUltimateSDK.sharedInstance().setDebugLogOpen(true)
-            #endif
-            let dic: [String: Any] = [codeKey: code_success, messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]]
-            result(dic)
+            AlibcTradeUltimateSDK.sharedInstance().enableLocalDebug(true)
+            AlibcTradeUltimateSDK.sharedInstance().setDebugLogOpen(true)
+//            #if DEBUG
+//                AlibcTradeUltimateSDK.sharedInstance().enableLocalDebug(true)
+//                AlibcTradeUltimateSDK.sharedInstance().setDebugLogOpen(true)
+//            #endif
+            let dict: [String: Any] = [codeKey: code_success, messageKey: "百川电商SDK初始化成功", dataKey: ["utdid": UTDevice.utdid()]]
+            result(dict)
 
         } failure: { error in
             let code = (error as NSError).code
             let msg = error.localizedDescription
-            let dic: [String: Any] = [codeKey: "\(code)", messageKey: "百川电商SDK初始化失败: \(msg)", dataKey: ["utdid": UTDevice.utdid()]]
-            result(dic)
+            let dict: [String: Any] = [codeKey: "\(code)", messageKey: "百川电商SDK初始化失败: \(msg)", dataKey: ["utdid": UTDevice.utdid()]]
+            result(dict)
         }
     }
-    
+
     /// 淘宝授权登录
     func authLogin(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         let isLogin = loginService.isLogin()
@@ -72,7 +73,7 @@ class MethodChannelHandle: NSObject {
             ]
 
             #if DEBUG
-                print("loginTaoBao-userInfo", dict)
+                print("--AlibcUserInfo--", dict)
             #endif
             result(dict)
 
@@ -92,7 +93,7 @@ class MethodChannelHandle: NSObject {
                         "topAuthCode": userInfo?.topAuthCode ?? ""],
                 ]
                 #if DEBUG
-                    print("loginTaoBao-userInfo", dict)
+                    print("--AlibcUserInfo--", dict)
                 #endif
 
                 result(dict)
@@ -106,7 +107,96 @@ class MethodChannelHandle: NSObject {
             }
         }
     }
-    
+
+    /// 是否已登录
+    func isLogin(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let state = loginService.isLogin()
+        result(state)
+    }
+
+    /// 获取Utdid
+    func getUtdid(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let utdid = UTDevice.utdid()
+        result(utdid)
+    }
+
+    /// 退出登录
+    func loginOut(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        loginService.logout()
+    }
+
+    /// 打开商品详情通过code
+    func openByCode(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        // 商品id
+        let id = call.getString(key: "id")
+        // 淘客ID
+        let pid = call.getString(key: "pid")
+        // 渠道id
+        let relationId = call.getString(key: "relationId")
+
+        let urlP = AlibcTradeUrlParams()
+        urlP.id = id
+
+        let showP = AlibcTradeShowParams()
+        showP.linkKey = "taobao"
+        showP.isPushBCWebView = false
+
+        let taokeP = AlibcTradeTaokeParams()
+        taokeP.pid = pid
+        taokeP.relationId = relationId
+        taokeP.materialSourceUrl = ""
+
+        let code = "suite://bc.suite.basic/bc.template.detail"
+
+        AlibcTradeUltimateSDK.sharedInstance().tradeService().openTradePage(byCode: code, parentController: rootViewController, urlParams: urlP, showParams: showP, taoKeParams: taokeP, trackParam: [:]) { error, data in
+
+            print("----", error ?? "success", data ?? [:])
+
+            if let err = error {
+                let code = (err as NSError).code
+                let dict: [String: Any] = [codeKey: "\(code)", messageKey: err.localizedDescription]
+                result(dict)
+
+            } else {
+                let dict: [String: Any] = [codeKey: code_success, messageKey: "打开成功"]
+                result(dict)
+            }
+        }
+    }
+
+    /// 打开商品详情通过url
+    func openByUrl(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let url = call.getString(key: "url")
+        // 商品id
+        let id = call.getString(key: "id")
+        // 淘客ID
+        let pid = call.getString(key: "pid")
+        // 渠道id
+        let relationId = call.getString(key: "relationId")
+
+        let urlP = AlibcTradeUrlParams()
+        urlP.id = id
+
+        let showP = AlibcTradeShowParams()
+        showP.linkKey = "taobao"
+        showP.isPushBCWebView = false
+
+        let taokeP = AlibcTradeTaokeParams()
+        taokeP.pid = pid
+        taokeP.relationId = relationId
+
+        AlibcTradeUltimateSDK.sharedInstance().tradeService().openTradeUrl(url, parentController: rootViewController, showParams: showP, taoKeParams: taokeP, trackParam: [:]) { error, data in
+            print("--openByUrl--", error ?? "success", data ?? [:])
+            if let err = error {
+                let code = (err as NSError).code
+                let dict: [String: Any] = [codeKey: "\(code)", messageKey: err.localizedDescription]
+                result(dict)
+            } else {
+                let dict: [String: Any] = [codeKey: code_success, messageKey: "打开成功"]
+                result(dict)
+            }
+        }
+    }
 }
 
 // 随便定义一个数组，如果等于他就是空

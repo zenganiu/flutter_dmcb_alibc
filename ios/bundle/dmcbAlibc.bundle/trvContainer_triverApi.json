@@ -1,0 +1,41 @@
+{
+    "version": "0.0.1",
+    "registerApiExtension": [
+        {}
+    ],
+    "registerDsl": {
+        "scope": "tb",
+        "apis": [
+            {
+                "apiName": "registerFavorEvent",
+                "dslApiName": "registerFavorEvent",
+                "type": "invoke"
+            },
+            {
+                "apiName": "changeFavorStatus",
+                "dslApiName": "changeFavorStatus",
+                "type": "invoke"
+            },
+            {
+                "apiName": "addMenu",
+                "dslApiName": "addMenu",
+                "type": "invoke"
+            },
+            {
+                "apiName": "navigateToTTC",
+                "dslApiName": "navigateToTTC",
+                "type": "invoke"
+            },
+            {
+                "apiName": "showGlobalMenu",
+                "dslApiName": "showGlobalMenu",
+                "type": "invoke"
+            },
+            {
+                "apiName": "setActionSheet",
+                "dslApiName": "setActionSheet",
+                "type": "invoke"
+            }
+        ]
+    }
+}

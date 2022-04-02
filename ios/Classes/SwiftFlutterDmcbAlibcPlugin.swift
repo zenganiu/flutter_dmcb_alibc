@@ -14,10 +14,27 @@ public class SwiftFlutterDmcbAlibcPlugin: NSObject, FlutterPlugin {
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         if call.method == "getPlatformVersion" {
             result("iOS " + UIDevice.current.systemVersion)
+
         } else if call.method == "initAlibc" {
             handle?.initAlibc(call: call, result: result)
-        } else if call.method == "login"{
-            
+
+        } else if call.method == "authLogin" {
+            handle?.authLogin(call, result: result)
+
+        } else if call.method == "getUtdid" {
+            handle?.getUtdid(call, result: result)
+
+        } else if call.method == "loginOut" {
+            handle?.loginOut(call, result: result)
+
+        } else if call.method == "isLogin" {
+            handle?.isLogin(call, result: result)
+
+        } else if call.method == "openByCode" {
+            handle?.openByCode(call, result: result)
+
+        } else if call.method == "openByUrl" {
+            handle?.openByUrl(call, result: result)
         }
     }
 }
