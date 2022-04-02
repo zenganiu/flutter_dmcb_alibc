@@ -1,0 +1,52 @@
+{
+    "registerApi": [
+        {
+            "moduleName": "image",
+            "moduleClass": "WMLAppImage",
+            "methods": {
+                "chooseImage": {
+                    "version": "0.0.1",
+                    "params": {
+                        "sourceType": true,
+                        "count": true,
+                        "extraParams": true
+                    },
+                    "success": {
+                        "apFilePaths": true
+                    },
+                    "fail": {}
+                },
+                "previewImage": {
+                    "version": "0.0.1",
+                    "params": {
+                        "urls": true,
+                        "current": true
+                    },
+                    "success": {},
+                    "fail": {}
+                },
+                "compressImage": {
+                    "version": "0.0.1",
+                    "params": {
+                        "apFilePaths": true,
+                        "compressLevel": true
+                    },
+                    "success": {},
+                    "fail": {}
+                },
+                "getImageInfo": {
+                    "version": "0.0.1",
+                    "params": {
+                        "src": true
+                    },
+                    "success": {
+                        "width": true,
+                        "height": true,
+                        "path": true
+                    },
+                    "fail": {}
+                }
+            }
+        }
+    ]
+}

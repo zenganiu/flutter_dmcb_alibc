@@ -1,0 +1,53 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_dmcb_alibc (0.0.1):
+    - Flutter
+    - FMDB (= 2.7.5)
+    - Masonry (= 1.1.0)
+    - Reachability (= 3.2)
+    - SDWebImage (= 5.12.5)
+    - SocketRocket (= 0.6.0)
+    - SSZipArchive (= 2.4.3)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Masonry (1.1.0)
+  - Reachability (3.2)
+  - SDWebImage (5.12.5):
+    - SDWebImage/Core (= 5.12.5)
+  - SDWebImage/Core (5.12.5)
+  - SocketRocket (0.6.0)
+  - SSZipArchive (2.4.3)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_dmcb_alibc (from `.symlinks/plugins/flutter_dmcb_alibc/ios`)
+
+SPEC REPOS:
+  trunk:
+    - FMDB
+    - Masonry
+    - Reachability
+    - SDWebImage
+    - SocketRocket
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_dmcb_alibc:
+    :path: ".symlinks/plugins/flutter_dmcb_alibc/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  flutter_dmcb_alibc: 7ea3ef807a79d4aacdebc12e9b5e418bb76ea9d4
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 0905f1b7760fc8ac4198cae0036600d67478751e
+  SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+
+PODFILE CHECKSUM: ce813e8640892ff85fd386500a2edff702bfa19e
+
+COCOAPODS: 1.11.2

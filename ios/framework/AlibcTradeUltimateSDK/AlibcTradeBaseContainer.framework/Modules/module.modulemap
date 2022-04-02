@@ -1,0 +1,6 @@
+framework module AlibcTradeBaseContainer {
+  umbrella header "AlibcTradeBaseContainer.h"
+
+  export *
+  module * { export * }
+}

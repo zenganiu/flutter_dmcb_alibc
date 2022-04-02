@@ -1,0 +1,6 @@
+framework module AliRemoteDebugInterface {
+    umbrella header "AliRemoteDebugInterfaceHeader.h"
+    
+    export *
+    module * { export * }
+}

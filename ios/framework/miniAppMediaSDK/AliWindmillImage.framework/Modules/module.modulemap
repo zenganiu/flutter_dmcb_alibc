@@ -1,0 +1,6 @@
+framework module AliWindmillImage {
+  umbrella header "AliWindmillImage.h"
+
+  export *
+  module * { export * }
+}

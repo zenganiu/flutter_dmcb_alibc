@@ -1,0 +1,6 @@
+framework module MunionBcAdSDK {
+  umbrella header "MunionBcAdSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module AliReachability {
+  umbrella header "AliReachability.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module UT_Core {
+  umbrella header "UT_Core.h"
+
+  export *
+  module * { export * }
+}

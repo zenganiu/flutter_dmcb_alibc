@@ -3,12 +3,58 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A48BA7827F82F8E00D601BC /* trv_permission_auth_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA4D27F82F8E00D601BC /* trv_permission_auth_close@2x.png */; };
+		0A48BA7927F82F8E00D601BC /* trv_video_centerPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA4E27F82F8E00D601BC /* trv_video_centerPause@2x.png */; };
+		0A48BA7A27F82F8E00D601BC /* trv_setting_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA4F27F82F8E00D601BC /* trv_setting_icon_dark@2x.png */; };
+		0A48BA7B27F82F8E00D601BC /* trv_pullrefresh_arrow_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5027F82F8E00D601BC /* trv_pullrefresh_arrow_dark@2x.png */; };
+		0A48BA7C27F82F8E00D601BC /* trv_share_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5127F82F8E00D601BC /* trv_share_icon_dark@2x.png */; };
+		0A48BA7D27F82F8E00D601BC /* triver_pub_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5227F82F8E00D601BC /* triver_pub_back@2x.png */; };
+		0A48BA7E27F82F8E00D601BC /* trv_right_top_bg_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5327F82F8E00D601BC /* trv_right_top_bg_dark@2x.png */; };
+		0A48BA7F27F82F8E00D601BC /* trv_right_top_quit_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5427F82F8E00D601BC /* trv_right_top_quit_icon_dark@2x.png */; };
+		0A48BA8027F82F8E00D601BC /* AlibcTradetrvContainer_triverApi.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5527F82F8E00D601BC /* AlibcTradetrvContainer_triverApi.json */; };
+		0A48BA8127F82F8E00D601BC /* trv_live_floating_tip@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5627F82F8E00D601BC /* trv_live_floating_tip@2x.png */; };
+		0A48BA8227F82F8E00D601BC /* trv_video_centerPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5727F82F8E00D601BC /* trv_video_centerPlay@2x.png */; };
+		0A48BA8327F82F8E00D601BC /* trv_tinyshop_loading_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5827F82F8E00D601BC /* trv_tinyshop_loading_close@2x.png */; };
+		0A48BA8427F82F8E00D601BC /* TRVLivePlayer_triverApi.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5927F82F8E00D601BC /* TRVLivePlayer_triverApi.json */; };
+		0A48BA8527F82F8E00D601BC /* trv_video_exitfullScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5A27F82F8E00D601BC /* trv_video_exitfullScreen@2x.png */; };
+		0A48BA8627F82F8E00D601BC /* trv_feedback_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5B27F82F8E00D601BC /* trv_feedback_icon_light@2x.png */; };
+		0A48BA8727F82F8E00D601BC /* triver_version.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5C27F82F8E00D601BC /* triver_version.json */; };
+		0A48BA8827F82F8E00D601BC /* trv_left_top_back_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5D27F82F8E00D601BC /* trv_left_top_back_icon_dark@2x.png */; };
+		0A48BA8927F82F8E00D601BC /* trv_icon_placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5E27F82F8E00D601BC /* trv_icon_placeholder@2x.png */; };
+		0A48BA8A27F82F8E00D601BC /* alihadeviceevaluation_bundle.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA5F27F82F8E00D601BC /* alihadeviceevaluation_bundle.plist */; };
+		0A48BA8B27F82F8E00D601BC /* trv_video_muted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6027F82F8E00D601BC /* trv_video_muted@2x.png */; };
+		0A48BA8C27F82F8E00D601BC /* trv_live_exitfullScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6127F82F8E00D601BC /* trv_live_exitfullScreen@2x.png */; };
+		0A48BA8D27F82F8E00D601BC /* trv_right_top_menu_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6227F82F8E00D601BC /* trv_right_top_menu_dark@2x.png */; };
+		0A48BA8E27F82F8E00D601BC /* trv_video_play@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6327F82F8E00D601BC /* trv_video_play@2x.png */; };
+		0A48BA8F27F82F8E00D601BC /* trv_right_top_menu_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6427F82F8E00D601BC /* trv_right_top_menu_light@2x.png */; };
+		0A48BA9027F82F8E00D601BC /* trv_right_top_quit_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6527F82F8E00D601BC /* trv_right_top_quit_icon_light@2x.png */; };
+		0A48BA9127F82F8E00D601BC /* trvContainer_triverApi.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6627F82F8E00D601BC /* trvContainer_triverApi.json */; };
+		0A48BA9227F82F8E00D601BC /* trv_app_loading_error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6727F82F8E00D601BC /* trv_app_loading_error@2x.png */; };
+		0A48BA9327F82F8E00D601BC /* trv_right_top_bg_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6827F82F8E00D601BC /* trv_right_top_bg_light@2x.png */; };
+		0A48BA9427F82F8E00D601BC /* trv_video_fullScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6927F82F8E00D601BC /* trv_video_fullScreen@2x.png */; };
+		0A48BA9527F82F8E00D601BC /* trv_feedback_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6A27F82F8E00D601BC /* trv_feedback_icon_dark@2x.png */; };
+		0A48BA9627F82F8E00D601BC /* trv_video_sliderDot@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6B27F82F8E00D601BC /* trv_video_sliderDot@2x.png */; };
+		0A48BA9727F82F8E00D601BC /* trv_shop_app_logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6C27F82F8E00D601BC /* trv_shop_app_logo@2x.png */; };
+		0A48BA9827F82F8E00D601BC /* trv_left_top_back_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6D27F82F8E00D601BC /* trv_left_top_back_icon_light@2x.png */; };
+		0A48BA9927F82F8E00D601BC /* AlibcBusiness_triverApi.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6E27F82F8E00D601BC /* AlibcBusiness_triverApi.json */; };
+		0A48BA9A27F82F8E00D601BC /* trv_right_top_setting_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA6F27F82F8E00D601BC /* trv_right_top_setting_icon_light@2x.png */; };
+		0A48BA9B27F82F8E00D601BC /* trv_right_top_setting_icon_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7027F82F8E00D601BC /* trv_right_top_setting_icon_dark@2x.png */; };
+		0A48BA9C27F82F8E00D601BC /* trv_right_top_location_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7127F82F8E00D601BC /* trv_right_top_location_light@2x.png */; };
+		0A48BA9D27F82F8E00D601BC /* trv_live_floating_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7227F82F8E00D601BC /* trv_live_floating_close@2x.png */; };
+		0A48BA9E27F82F8E00D601BC /* trv_right_top_location_dark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7327F82F8E00D601BC /* trv_right_top_location_dark@2x.png */; };
+		0A48BA9F27F82F8E00D601BC /* trv_video_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7427F82F8E00D601BC /* trv_video_pause@2x.png */; };
+		0A48BAA027F82F8E00D601BC /* trv_share_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7527F82F8E00D601BC /* trv_share_icon_light@2x.png */; };
+		0A48BAA127F82F8E00D601BC /* trv_video_notMuted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7627F82F8E00D601BC /* trv_video_notMuted@2x.png */; };
+		0A48BAA227F82F8E00D601BC /* trv_setting_icon_light@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A48BA7727F82F8E00D601BC /* trv_setting_icon_light@2x.png */; };
+		0AAC598C27F700E400F86521 /* yw_1222_baichuan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC598A27F700E400F86521 /* yw_1222_baichuan.jpg */; };
+		0AAC598D27F700E400F86521 /* mtopsdk_configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0AAC598B27F700E400F86521 /* mtopsdk_configuration.plist */; };
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
 		3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */; };
+		59423B153468A503805FE4D9 /* libPods-Runner.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 763F6B99D8D361A431282BB6 /* libPods-Runner.a */; };
 		74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74858FAE1ED2DC5600515810 /* AppDelegate.swift */; };
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
@@ -29,11 +75,58 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A48BA4D27F82F8E00D601BC /* trv_permission_auth_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_permission_auth_close@2x.png"; sourceTree = "<group>"; };
+		0A48BA4E27F82F8E00D601BC /* trv_video_centerPause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_centerPause@2x.png"; sourceTree = "<group>"; };
+		0A48BA4F27F82F8E00D601BC /* trv_setting_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_setting_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5027F82F8E00D601BC /* trv_pullrefresh_arrow_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_pullrefresh_arrow_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5127F82F8E00D601BC /* trv_share_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_share_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5227F82F8E00D601BC /* triver_pub_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "triver_pub_back@2x.png"; sourceTree = "<group>"; };
+		0A48BA5327F82F8E00D601BC /* trv_right_top_bg_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_bg_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5427F82F8E00D601BC /* trv_right_top_quit_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_quit_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5527F82F8E00D601BC /* AlibcTradetrvContainer_triverApi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlibcTradetrvContainer_triverApi.json; sourceTree = "<group>"; };
+		0A48BA5627F82F8E00D601BC /* trv_live_floating_tip@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_live_floating_tip@2x.png"; sourceTree = "<group>"; };
+		0A48BA5727F82F8E00D601BC /* trv_video_centerPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_centerPlay@2x.png"; sourceTree = "<group>"; };
+		0A48BA5827F82F8E00D601BC /* trv_tinyshop_loading_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_tinyshop_loading_close@2x.png"; sourceTree = "<group>"; };
+		0A48BA5927F82F8E00D601BC /* TRVLivePlayer_triverApi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TRVLivePlayer_triverApi.json; sourceTree = "<group>"; };
+		0A48BA5A27F82F8E00D601BC /* trv_video_exitfullScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_exitfullScreen@2x.png"; sourceTree = "<group>"; };
+		0A48BA5B27F82F8E00D601BC /* trv_feedback_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_feedback_icon_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA5C27F82F8E00D601BC /* triver_version.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = triver_version.json; sourceTree = "<group>"; };
+		0A48BA5D27F82F8E00D601BC /* trv_left_top_back_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_left_top_back_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA5E27F82F8E00D601BC /* trv_icon_placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_icon_placeholder@2x.png"; sourceTree = "<group>"; };
+		0A48BA5F27F82F8E00D601BC /* alihadeviceevaluation_bundle.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = alihadeviceevaluation_bundle.plist; sourceTree = "<group>"; };
+		0A48BA6027F82F8E00D601BC /* trv_video_muted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_muted@2x.png"; sourceTree = "<group>"; };
+		0A48BA6127F82F8E00D601BC /* trv_live_exitfullScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_live_exitfullScreen@2x.png"; sourceTree = "<group>"; };
+		0A48BA6227F82F8E00D601BC /* trv_right_top_menu_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_menu_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA6327F82F8E00D601BC /* trv_video_play@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_play@2x.png"; sourceTree = "<group>"; };
+		0A48BA6427F82F8E00D601BC /* trv_right_top_menu_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_menu_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA6527F82F8E00D601BC /* trv_right_top_quit_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_quit_icon_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA6627F82F8E00D601BC /* trvContainer_triverApi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trvContainer_triverApi.json; sourceTree = "<group>"; };
+		0A48BA6727F82F8E00D601BC /* trv_app_loading_error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_app_loading_error@2x.png"; sourceTree = "<group>"; };
+		0A48BA6827F82F8E00D601BC /* trv_right_top_bg_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_bg_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA6927F82F8E00D601BC /* trv_video_fullScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_fullScreen@2x.png"; sourceTree = "<group>"; };
+		0A48BA6A27F82F8E00D601BC /* trv_feedback_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_feedback_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA6B27F82F8E00D601BC /* trv_video_sliderDot@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_sliderDot@2x.png"; sourceTree = "<group>"; };
+		0A48BA6C27F82F8E00D601BC /* trv_shop_app_logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_shop_app_logo@2x.png"; sourceTree = "<group>"; };
+		0A48BA6D27F82F8E00D601BC /* trv_left_top_back_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_left_top_back_icon_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA6E27F82F8E00D601BC /* AlibcBusiness_triverApi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlibcBusiness_triverApi.json; sourceTree = "<group>"; };
+		0A48BA6F27F82F8E00D601BC /* trv_right_top_setting_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_setting_icon_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA7027F82F8E00D601BC /* trv_right_top_setting_icon_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_setting_icon_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA7127F82F8E00D601BC /* trv_right_top_location_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_location_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA7227F82F8E00D601BC /* trv_live_floating_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_live_floating_close@2x.png"; sourceTree = "<group>"; };
+		0A48BA7327F82F8E00D601BC /* trv_right_top_location_dark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_right_top_location_dark@2x.png"; sourceTree = "<group>"; };
+		0A48BA7427F82F8E00D601BC /* trv_video_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_pause@2x.png"; sourceTree = "<group>"; };
+		0A48BA7527F82F8E00D601BC /* trv_share_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_share_icon_light@2x.png"; sourceTree = "<group>"; };
+		0A48BA7627F82F8E00D601BC /* trv_video_notMuted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_video_notMuted@2x.png"; sourceTree = "<group>"; };
+		0A48BA7727F82F8E00D601BC /* trv_setting_icon_light@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "trv_setting_icon_light@2x.png"; sourceTree = "<group>"; };
+		0AAC598A27F700E400F86521 /* yw_1222_baichuan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yw_1222_baichuan.jpg; sourceTree = "<group>"; };
+		0AAC598B27F700E400F86521 /* mtopsdk_configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mtopsdk_configuration.plist; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		1C115B101098DB2822419BBB /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = AppFrameworkInfo.plist; path = Flutter/AppFrameworkInfo.plist; sourceTree = "<group>"; };
 		74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Runner-Bridging-Header.h"; sourceTree = "<group>"; };
 		74858FAE1ED2DC5600515810 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		763F6B99D8D361A431282BB6 /* libPods-Runner.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Runner.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AFA3C8E1D35360C0083082E /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = Flutter/Release.xcconfig; sourceTree = "<group>"; };
 		9740EEB21CF90195004384FC /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = Flutter/Debug.xcconfig; sourceTree = "<group>"; };
 		9740EEB31CF90195004384FC /* Generated.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Generated.xcconfig; path = Flutter/Generated.xcconfig; sourceTree = "<group>"; };
@@ -42,6 +135,8 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3923317CAB5A0D7D7AA810D /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
+		EF8D06F522938EFA6A56B2EB /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,12 +144,81 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59423B153468A503805FE4D9 /* libPods-Runner.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A48BA4C27F82F8E00D601BC /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				0A48BA4D27F82F8E00D601BC /* trv_permission_auth_close@2x.png */,
+				0A48BA4E27F82F8E00D601BC /* trv_video_centerPause@2x.png */,
+				0A48BA4F27F82F8E00D601BC /* trv_setting_icon_dark@2x.png */,
+				0A48BA5027F82F8E00D601BC /* trv_pullrefresh_arrow_dark@2x.png */,
+				0A48BA5127F82F8E00D601BC /* trv_share_icon_dark@2x.png */,
+				0A48BA5227F82F8E00D601BC /* triver_pub_back@2x.png */,
+				0A48BA5327F82F8E00D601BC /* trv_right_top_bg_dark@2x.png */,
+				0A48BA5427F82F8E00D601BC /* trv_right_top_quit_icon_dark@2x.png */,
+				0A48BA5527F82F8E00D601BC /* AlibcTradetrvContainer_triverApi.json */,
+				0A48BA5627F82F8E00D601BC /* trv_live_floating_tip@2x.png */,
+				0A48BA5727F82F8E00D601BC /* trv_video_centerPlay@2x.png */,
+				0A48BA5827F82F8E00D601BC /* trv_tinyshop_loading_close@2x.png */,
+				0A48BA5927F82F8E00D601BC /* TRVLivePlayer_triverApi.json */,
+				0A48BA5A27F82F8E00D601BC /* trv_video_exitfullScreen@2x.png */,
+				0A48BA5B27F82F8E00D601BC /* trv_feedback_icon_light@2x.png */,
+				0A48BA5C27F82F8E00D601BC /* triver_version.json */,
+				0A48BA5D27F82F8E00D601BC /* trv_left_top_back_icon_dark@2x.png */,
+				0A48BA5E27F82F8E00D601BC /* trv_icon_placeholder@2x.png */,
+				0A48BA5F27F82F8E00D601BC /* alihadeviceevaluation_bundle.plist */,
+				0A48BA6027F82F8E00D601BC /* trv_video_muted@2x.png */,
+				0A48BA6127F82F8E00D601BC /* trv_live_exitfullScreen@2x.png */,
+				0A48BA6227F82F8E00D601BC /* trv_right_top_menu_dark@2x.png */,
+				0A48BA6327F82F8E00D601BC /* trv_video_play@2x.png */,
+				0A48BA6427F82F8E00D601BC /* trv_right_top_menu_light@2x.png */,
+				0A48BA6527F82F8E00D601BC /* trv_right_top_quit_icon_light@2x.png */,
+				0A48BA6627F82F8E00D601BC /* trvContainer_triverApi.json */,
+				0A48BA6727F82F8E00D601BC /* trv_app_loading_error@2x.png */,
+				0A48BA6827F82F8E00D601BC /* trv_right_top_bg_light@2x.png */,
+				0A48BA6927F82F8E00D601BC /* trv_video_fullScreen@2x.png */,
+				0A48BA6A27F82F8E00D601BC /* trv_feedback_icon_dark@2x.png */,
+				0A48BA6B27F82F8E00D601BC /* trv_video_sliderDot@2x.png */,
+				0A48BA6C27F82F8E00D601BC /* trv_shop_app_logo@2x.png */,
+				0A48BA6D27F82F8E00D601BC /* trv_left_top_back_icon_light@2x.png */,
+				0A48BA6E27F82F8E00D601BC /* AlibcBusiness_triverApi.json */,
+				0A48BA6F27F82F8E00D601BC /* trv_right_top_setting_icon_light@2x.png */,
+				0A48BA7027F82F8E00D601BC /* trv_right_top_setting_icon_dark@2x.png */,
+				0A48BA7127F82F8E00D601BC /* trv_right_top_location_light@2x.png */,
+				0A48BA7227F82F8E00D601BC /* trv_live_floating_close@2x.png */,
+				0A48BA7327F82F8E00D601BC /* trv_right_top_location_dark@2x.png */,
+				0A48BA7427F82F8E00D601BC /* trv_video_pause@2x.png */,
+				0A48BA7527F82F8E00D601BC /* trv_share_icon_light@2x.png */,
+				0A48BA7627F82F8E00D601BC /* trv_video_notMuted@2x.png */,
+				0A48BA7727F82F8E00D601BC /* trv_setting_icon_light@2x.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		7537239AFED68F4FA849F09F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1C115B101098DB2822419BBB /* Pods-Runner.debug.xcconfig */,
+				EF8D06F522938EFA6A56B2EB /* Pods-Runner.release.xcconfig */,
+				D3923317CAB5A0D7D7AA810D /* Pods-Runner.profile.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8CFF447D3CDF7FB2B1C64252 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				763F6B99D8D361A431282BB6 /* libPods-Runner.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +236,8 @@
 				9740EEB11CF90186004384FC /* Flutter */,
 				97C146F01CF9000F007C117D /* Runner */,
 				97C146EF1CF9000F007C117D /* Products */,
+				7537239AFED68F4FA849F09F /* Pods */,
+				8CFF447D3CDF7FB2B1C64252 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +252,9 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				0A48BA4C27F82F8E00D601BC /* resource */,
+				0AAC598B27F700E400F86521 /* mtopsdk_configuration.plist */,
+				0AAC598A27F700E400F86521 /* yw_1222_baichuan.jpg */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
@@ -105,12 +274,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
+				601E100598657C1B4B78105F /* [CP] Check Pods Manifest.lock */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
 				97C146EB1CF9000F007C117D /* Frameworks */,
 				97C146EC1CF9000F007C117D /* Resources */,
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
+				EBDEF4C72C9FC3079359AEF2 /* [CP] Embed Pods Frameworks */,
+				5AF12815C56A61E4120BBDCE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +331,54 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A48BA7C27F82F8E00D601BC /* trv_share_icon_dark@2x.png in Resources */,
+				0A48BA8C27F82F8E00D601BC /* trv_live_exitfullScreen@2x.png in Resources */,
+				0A48BA7D27F82F8E00D601BC /* triver_pub_back@2x.png in Resources */,
+				0A48BA8827F82F8E00D601BC /* trv_left_top_back_icon_dark@2x.png in Resources */,
+				0A48BA9827F82F8E00D601BC /* trv_left_top_back_icon_light@2x.png in Resources */,
+				0A48BA8627F82F8E00D601BC /* trv_feedback_icon_light@2x.png in Resources */,
+				0A48BA7F27F82F8E00D601BC /* trv_right_top_quit_icon_dark@2x.png in Resources */,
+				0A48BA8127F82F8E00D601BC /* trv_live_floating_tip@2x.png in Resources */,
+				0A48BA9427F82F8E00D601BC /* trv_video_fullScreen@2x.png in Resources */,
+				0A48BA8027F82F8E00D601BC /* AlibcTradetrvContainer_triverApi.json in Resources */,
+				0A48BA9F27F82F8E00D601BC /* trv_video_pause@2x.png in Resources */,
+				0A48BA8327F82F8E00D601BC /* trv_tinyshop_loading_close@2x.png in Resources */,
+				0A48BA9E27F82F8E00D601BC /* trv_right_top_location_dark@2x.png in Resources */,
+				0A48BA9727F82F8E00D601BC /* trv_shop_app_logo@2x.png in Resources */,
+				0A48BA8527F82F8E00D601BC /* trv_video_exitfullScreen@2x.png in Resources */,
+				0A48BA9527F82F8E00D601BC /* trv_feedback_icon_dark@2x.png in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
+				0A48BA9A27F82F8E00D601BC /* trv_right_top_setting_icon_light@2x.png in Resources */,
+				0A48BA7927F82F8E00D601BC /* trv_video_centerPause@2x.png in Resources */,
+				0A48BA8A27F82F8E00D601BC /* alihadeviceevaluation_bundle.plist in Resources */,
+				0A48BA8427F82F8E00D601BC /* TRVLivePlayer_triverApi.json in Resources */,
+				0A48BA8B27F82F8E00D601BC /* trv_video_muted@2x.png in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
+				0A48BAA127F82F8E00D601BC /* trv_video_notMuted@2x.png in Resources */,
+				0A48BA8727F82F8E00D601BC /* triver_version.json in Resources */,
+				0A48BA8927F82F8E00D601BC /* trv_icon_placeholder@2x.png in Resources */,
+				0A48BA9227F82F8E00D601BC /* trv_app_loading_error@2x.png in Resources */,
+				0AAC598D27F700E400F86521 /* mtopsdk_configuration.plist in Resources */,
+				0A48BA9927F82F8E00D601BC /* AlibcBusiness_triverApi.json in Resources */,
+				0A48BA7B27F82F8E00D601BC /* trv_pullrefresh_arrow_dark@2x.png in Resources */,
+				0A48BA8E27F82F8E00D601BC /* trv_video_play@2x.png in Resources */,
+				0A48BA7827F82F8E00D601BC /* trv_permission_auth_close@2x.png in Resources */,
+				0A48BA9027F82F8E00D601BC /* trv_right_top_quit_icon_light@2x.png in Resources */,
+				0A48BA9D27F82F8E00D601BC /* trv_live_floating_close@2x.png in Resources */,
+				0A48BA9127F82F8E00D601BC /* trvContainer_triverApi.json in Resources */,
+				0A48BAA227F82F8E00D601BC /* trv_setting_icon_light@2x.png in Resources */,
+				0A48BA7E27F82F8E00D601BC /* trv_right_top_bg_dark@2x.png in Resources */,
+				0A48BAA027F82F8E00D601BC /* trv_share_icon_light@2x.png in Resources */,
 				97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */,
+				0A48BA8D27F82F8E00D601BC /* trv_right_top_menu_dark@2x.png in Resources */,
+				0A48BA9C27F82F8E00D601BC /* trv_right_top_location_light@2x.png in Resources */,
+				0A48BA8227F82F8E00D601BC /* trv_video_centerPlay@2x.png in Resources */,
+				0A48BA8F27F82F8E00D601BC /* trv_right_top_menu_light@2x.png in Resources */,
+				0A48BA9B27F82F8E00D601BC /* trv_right_top_setting_icon_dark@2x.png in Resources */,
+				0A48BA9327F82F8E00D601BC /* trv_right_top_bg_light@2x.png in Resources */,
+				0AAC598C27F700E400F86521 /* yw_1222_baichuan.jpg in Resources */,
+				0A48BA7A27F82F8E00D601BC /* trv_setting_icon_dark@2x.png in Resources */,
+				0A48BA9627F82F8E00D601BC /* trv_video_sliderDot@2x.png in Resources */,
 				97C146FC1CF9000F007C117D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,6 +400,45 @@
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
 		};
+		5AF12815C56A61E4120BBDCE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		601E100598657C1B4B78105F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Runner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9740EEB61CF901F6004384FC /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -196,6 +452,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+		};
+		EBDEF4C72C9FC3079359AEF2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -286,16 +559,18 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 9J7FB6H2A9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterDmcbAlibcExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huimin.dmcb.alibcTradeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -415,16 +690,18 @@
 			baseConfigurationReference = 9740EEB21CF90195004384FC /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 9J7FB6H2A9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterDmcbAlibcExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huimin.dmcb.alibcTradeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -438,16 +715,18 @@
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = "$(FLUTTER_BUILD_NUMBER)";
 				DEVELOPMENT_TEAM = 9J7FB6H2A9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterDmcbAlibcExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.huimin.dmcb.alibcTradeDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

@@ -1,0 +1,6 @@
+framework module AlibcTradeWebViewContainer {
+  umbrella header "AlibcTradeWebViewContainer.h"
+
+  export *
+  module * { export * }
+}

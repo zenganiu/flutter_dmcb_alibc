@@ -1,0 +1,6 @@
+framework module UT_AppMonitor {
+  umbrella header "UT_AppMonitor.h"
+
+  export *
+  module * { export * }
+}
