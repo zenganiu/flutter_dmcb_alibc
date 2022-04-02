@@ -9,7 +9,8 @@
 
 ```yaml
 dependencies:
-  flutter_dmcb_alibc:  ^4.2.1
+  flutter_dmcb_alibc:
+    git: https://github.com/zenganiu/flutter_dmcb_alibc.git
 ```
 ### 使用
  ```dart
