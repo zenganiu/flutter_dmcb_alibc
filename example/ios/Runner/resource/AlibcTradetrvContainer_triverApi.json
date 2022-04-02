@@ -1,0 +1,61 @@
+{
+    "version": "0.0.1",
+    "registerApiExtension": [
+        {}
+    ],
+    "registerDsl": {
+        "scope": "tb",
+        "apis": [
+            {
+                "apiName": "tbGetBizParam",
+                "dslApiName": "getBizParam",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbIsLogin",
+                "dslApiName": "isLogin",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbLogin",
+                "dslApiName": "login",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbLogout",
+                "dslApiName": "logout",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbRebate",
+                "dslApiName": "rebate",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbJumpNative",
+                "dslApiName": "jumpNative",
+                "type": "invoke"
+            },
+            {
+                "apiName": "getAlibcSuiteConfig",
+                "dslApiName": "getAlibcSuiteConfig",
+                "type": "invoke"
+            },
+            {
+                "apiName": "tbSetBizParam",
+                "dslApiName": "setBizParam",
+                "type": "invoke"
+            },
+            {
+                "apiName": "getDeviceId",
+                "dslApiName": "getDeviceId",
+                "type": "invoke"
+            },
+            {
+                "apiName": "getApplinkKey",
+                "dslApiName": "getApplinkKey",
+                "type": "invoke"
+            }
+        ]
+    }
+}

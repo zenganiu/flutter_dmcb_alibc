@@ -62,7 +62,7 @@ class MethodChannelHandle: NSObject {
             let userInfo = loginService.getUser()
             let dict: Dictionary<String, Any> = [
                 codeKey: code_success,
-                messageKey: "success",
+                messageKey: "用户已登录",
                 dataKey: [
                     "nick": userInfo?.nick ?? "",
                     "avatarUrl": userInfo?.avatarUrl ?? "",
@@ -83,7 +83,7 @@ class MethodChannelHandle: NSObject {
 
                 let dict: Dictionary<String, Any> = [
                     codeKey: code_success,
-                    messageKey: "success",
+                    messageKey: "用户授权登录",
                     dataKey: [
                         "nick": userInfo?.nick ?? "",
                         "avatarUrl": userInfo?.avatarUrl ?? "",
