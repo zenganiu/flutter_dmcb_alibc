@@ -4,7 +4,7 @@
 
 ## 使用指南
 
-### 安装
+> ### 安装
 在 `pubspec.yaml` 中添加
 
 ```yaml
@@ -12,7 +12,7 @@ dependencies:
   flutter_dmcb_alibc:
     git: https://github.com/zenganiu/flutter_dmcb_alibc.git
 ```
-### 使用
+> ### 使用
  ```dart
 import 'package:flutter_dmcb_alibc/flutter_dmcb_alibc.dart';
 
