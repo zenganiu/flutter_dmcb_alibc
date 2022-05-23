@@ -48,7 +48,7 @@ class DmcbAlibcUser {
 }
 
 T? _getPayloadModel<T>(dynamic value) {
-  T? result = null;
+  T? result;
   if (value is Map) {
     if (T == DmcbAlibcUser) {
       result = DmcbAlibcUser.fromJson(value) as T?;
