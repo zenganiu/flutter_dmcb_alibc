@@ -69,6 +69,8 @@ class _MyAppState extends State<MyApp> {
                   const SizedBox(height: 16),
                   OutlinedButton(onPressed: openByCode, child: const Text('open by code')),
                   const SizedBox(height: 16),
+                  OutlinedButton(onPressed: openByUrl, child: const Text('open by url')),
+                  const SizedBox(height: 16),
                   OutlinedButton(onPressed: logout, child: const Text('退出登录')),
                 ],
               ),
@@ -119,5 +121,15 @@ class _MyAppState extends State<MyApp> {
     );
 
     print(res);
+  }
+
+  void openByUrl() async {
+    final res = await FlutterDmcbAlibc.openByUrl(
+      //url: "https://uland.taobao.com/quan/detail?sellerId=2184341780&activityId=c20c73d1f7c04e3488512f5e45b1a00c",
+      url: "https://uland.taobao.com/coupon/edetail?e=qDn6JUq1qJMNfLV8niU3R5TgU2jJNKOfNNtsjZw%2F%2FoJms6L95Arne3H3vPDGqf3toOju9iDH1ffzHoMJvGBOZ5rFNBQuQgInNg4Gqf8CT4C52QHp1NazSDAtmMXHLxkRmMHpNfYdHdA79XCbiE%2BEvbMIJ15N9xbNbaCdIF6c6YN%2B%2F62v0DkmDgKlNMeVV1112i%2FUsVUylfJlBRYM90QVRw%3D%3D&&app_pvid=59590_33.61.98.174_848_1653376051062&ptl=floorId:6706;app_pvid:59590_33.61.98.174_848_1653376051062;tpp_pvid:100_11.14.196.31_43509_1801653376051067520&union_lens=lensId%3AMAPI%401653376051%40213d62ae_0919_180f4e46818_30c1%4001",
+      id: "585903443033",
+      pid: "mm_1460680056_2101550125_110951050292",
+      relationId: "2763056884",
+    );
   }
 }
