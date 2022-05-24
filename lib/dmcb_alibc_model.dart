@@ -22,13 +22,27 @@ class DmcbAlibcModel<T> {
   }
 }
 
+/// 用户信息
 class DmcbAlibcUser {
+  /// 昵称
   final String? nick;
+
+  /// 头像
   final String? avatarUrl;
+
+  /// openId
   final String? openId;
+
+  /// openSid
   final String? openSid;
+
+  /// topAccessToken
   final String? topAccessToken;
+
+  /// topAuthCode
   final String? topAuthCode;
+
+  /// 构造函数
   DmcbAlibcUser({
     this.nick,
     this.avatarUrl,
@@ -38,6 +52,7 @@ class DmcbAlibcUser {
     this.topAuthCode,
   });
 
+  /// 从json数据中构建
   DmcbAlibcUser.fromJson(Map? js)
       : nick = _getValueByJson<String>(js?['nick']),
         avatarUrl = _getValueByJson<String>(js?['avatarUrl']),
@@ -45,6 +60,19 @@ class DmcbAlibcUser {
         openSid = _getValueByJson<String>(js?['openSid']),
         topAccessToken = _getValueByJson<String>(js?['topAccessToken']),
         topAuthCode = _getValueByJson<String>(js?['topAuthCode']);
+
+  @override
+  String toString() {
+    final list = {
+      'nick': nick,
+      'avatarUrl': avatarUrl,
+      'openId': openId,
+      'openSid': openSid,
+      'topAccessToken': topAccessToken,
+      'topAuthCode': topAuthCode,
+    };
+    return convert.jsonEncode(list);
+  }
 }
 
 T? _getPayloadModel<T>(dynamic value) {

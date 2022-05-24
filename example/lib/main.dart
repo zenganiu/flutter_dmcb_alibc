@@ -26,23 +26,14 @@ class _MyAppState extends State<MyApp> {
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
-
     final result = await FlutterDmcbAlibc.initAlibc();
     print(result);
-
-
     String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    // We also handle the message potentially returning null.
     try {
       platformVersion = await FlutterDmcbAlibc.platformVersion ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
-
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
     if (!mounted) return;
 
     setState(() {
@@ -57,19 +48,31 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              OutlinedButton(onPressed: initAlibc, child: const Text('初始化')),
-              Text('Running on: $_platformVersion\n'),
-              OutlinedButton(onPressed: hasLogin, child: const Text('是否登录')),
-              OutlinedButton(onPressed: getUTdid, child: const Text('getUTdid')),
-              OutlinedButton(onPressed: getUserInfo, child: const Text('getUserInfo')),
-              OutlinedButton(onPressed: login, child: const Text('登录')),
-              OutlinedButton(onPressed: openByCode, child: const Text('open by code')),
-              OutlinedButton(onPressed: logout, child: const Text('退出登录')),
-            ],
+        body: SafeArea(
+          child: SingleChildScrollView(
+            child: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: initAlibc, child: const Text('初始化')),
+                  Text('Running on: $_platformVersion\n'),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: hasLogin, child: const Text('是否登录')),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: getUTdid, child: const Text('getUTdid')),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: getUserInfo, child: const Text('getUserInfo')),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: login, child: const Text('登录')),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: openByCode, child: const Text('open by code')),
+                  const SizedBox(height: 16),
+                  OutlinedButton(onPressed: logout, child: const Text('退出登录')),
+                ],
+              ),
+            ),
           ),
         ),
       ),
@@ -87,8 +90,11 @@ class _MyAppState extends State<MyApp> {
   }
 
   void getUserInfo() async {
-    final utdid = await FlutterDmcbAlibc.getUserInfo();
-    print(utdid);
+    final userInfo = await FlutterDmcbAlibc.getUserInfo();
+    print([
+      userInfo.payload?.nick,
+      userInfo.payload?.openId,
+    ]);
   }
 
   void hasLogin() async {
@@ -107,6 +113,11 @@ class _MyAppState extends State<MyApp> {
 
   void openByCode() async {
     final res = await FlutterDmcbAlibc.openByCode(
-        id: '668413008263', pid: 'mm_1460680056_2101550125_110951050292', relationId: '2763056884');
+      id: '668413008263',
+      pid: 'mm_1460680056_2101550125_110951050292',
+      relationId: '2763056884',
+    );
+
+    print(res);
   }
 }

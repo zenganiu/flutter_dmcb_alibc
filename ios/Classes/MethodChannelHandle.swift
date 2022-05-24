@@ -8,7 +8,6 @@
 import Foundation
 import WindmillWeaver
 
-
 class MethodChannelHandle: NSObject {
     private var channel: FlutterMethodChannel?
     init(channel: FlutterMethodChannel) {
@@ -163,20 +162,28 @@ class MethodChannelHandle: NSObject {
 
         let code = "suite://bc.suite.basic/bc.template.detail"
 
-        AlibcTradeUltimateSDK.sharedInstance().tradeService().openTradePage(byCode: code, parentController: rootViewController, urlParams: urlP, showParams: showP, taoKeParams: taokeP, trackParam: [:]) { error, data in
+        AlibcTradeUltimateSDK.sharedInstance()
+            .tradeService()
+            .openTradePage(
+                byCode: code,
+                parentController: rootViewController,
+                urlParams: urlP,
+                showParams: showP,
+                taoKeParams: taokeP,
+                trackParam: [:]) { error, data in
 
-            printLog("--Alibc--openByCode", error ?? "success", data ?? [:])
+                printLog("--Alibc--openByCode", error ?? "success", data ?? [:])
 
-            if let err = error {
-                let code = (err as NSError).code
-                let dict = MyResult.error(code: "\(code)", message: err.localizedDescription)
-                result(dict)
+                if let err = error {
+                    let code = (err as NSError).code
+                    let dict = MyResult.error(code: "\(code)", message: err.localizedDescription)
+                    result(dict)
 
-            } else {
-                let dict = MyResult.success(message: "打开成功")
-                result(dict)
+                } else {
+                    let dict = MyResult.success(message: "打开成功")
+                    result(dict)
+                }
             }
-        }
     }
 
     // MARK: - - 打开商品详情通过url
@@ -202,18 +209,26 @@ class MethodChannelHandle: NSObject {
         taokeP.pid = pid
         taokeP.relationId = relationId
 
-        AlibcTradeUltimateSDK.sharedInstance().tradeService().openTradeUrl(url, parentController: rootViewController, showParams: showP, taoKeParams: taokeP, trackParam: [:]) { error, data in
+        AlibcTradeUltimateSDK
+            .sharedInstance()
+            .tradeService()
+            .openTradeUrl(
+                url,
+                parentController: rootViewController,
+                showParams: showP,
+                taoKeParams: taokeP,
+                trackParam: [:]) { error, data in
 
-            printLog("--Alibc--openByUrl", error ?? "success", data ?? [:])
+                printLog("--Alibc--openByUrl", error ?? "success", data ?? [:])
 
-            if let err = error {
-                let code = (err as NSError).code
-                let dict = MyResult.error(code: "\(code)", message: err.localizedDescription)
-                result(dict)
-            } else {
-                let dict = MyResult.success(message: "打开成功")
-                result(dict)
+                if let err = error {
+                    let code = (err as NSError).code
+                    let dict = MyResult.error(code: "\(code)", message: err.localizedDescription)
+                    result(dict)
+                } else {
+                    let dict = MyResult.success(message: "打开成功")
+                    result(dict)
+                }
             }
-        }
     }
 }
