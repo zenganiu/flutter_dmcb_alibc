@@ -50,6 +50,21 @@ class FlutterDmcbAlibc {
     return model;
   }
 
+  /// 获取token
+  static Future<DmcbAlibcModel<DmcbAlibcAccessToken>> getAccessToken({
+    required String appKey,
+    required String appName,
+    required String appLogo,
+  }) async {
+    final json = await _channel.invokeMethod('getAccessToken', {
+      'appKey': appKey,
+      'appName': appName,
+      'appLogo': appLogo,
+    });
+    final data = DmcbAlibcModel<DmcbAlibcAccessToken>.formJson(json);
+    return data;
+  }
+
   /// 通过code打开商品
   ///
   /// [id] 商品id

@@ -82,6 +82,37 @@ class MethodChannelHandle: NSObject {
         }
     }
 
+    // MARK: - - 获取token
+
+    /// 获取token
+    func getAccessToken(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
+        let appKey = call.getString(key: "appKey") ?? ""
+        let appName = call.getString(key: "appName") ?? ""
+        let appLogo = call.getString(key: "appLogo") ?? ""
+
+        AlibcTradeUltimateSDK.sharedInstance()
+            .tradeService()
+            .authorize4AppKey(appKey,
+                              appName: appName,
+                              appLogo: UIImage(named: appLogo),
+                              currentVC: rootViewController) { error, accessToken, expire in
+
+                if let err = error {
+                    let dict = MyResult.error(message: "token获取失败: \(err.localizedDescription)")
+                    printLog("--Alibc--getAccessToken", dict)
+                    result(dict)
+
+                } else {
+                    let dict = MyResult.success(message: "token获取成功", payload: [
+                        "accessToken": accessToken ?? "",
+                        "expire": expire ?? "",
+                    ])
+                    printLog("--Alibc--getAccessToken", dict)
+                    result(dict)
+                }
+            }
+    }
+
     // MARK: - - 淘宝授权登录
 
     /// 淘宝授权登录

@@ -75,11 +75,38 @@ class DmcbAlibcUser {
   }
 }
 
+/// 用户授权token信息
+class DmcbAlibcAccessToken {
+  /// token
+  final String? accessToken;
+
+  /// 单位秒
+  final String? expire;
+
+  DmcbAlibcAccessToken({this.accessToken, this.expire});
+
+  /// 从json数据中构建
+  DmcbAlibcAccessToken.fromJson(Map? js)
+      : accessToken = _getValueByJson<String>(js?['accessToken']),
+        expire = _getValueByJson<String>(js?['expire']);
+
+  @override
+  String toString() {
+    final list = {
+      'accessToken': accessToken,
+      'expire': expire,
+    };
+    return convert.jsonEncode(list);
+  }
+}
+
 T? _getPayloadModel<T>(dynamic value) {
   T? result;
   if (value is Map) {
     if (T == DmcbAlibcUser) {
       result = DmcbAlibcUser.fromJson(value) as T?;
+    } else if (T == DmcbAlibcAccessToken) {
+      result = DmcbAlibcAccessToken.fromJson(value) as T?;
     }
   }
   return result;
