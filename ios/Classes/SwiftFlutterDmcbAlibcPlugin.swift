@@ -37,7 +37,13 @@ public class SwiftFlutterDmcbAlibcPlugin: NSObject, FlutterPlugin {
             handle?.openByCode(call, result: result)
 
         } else if call.method == "openByUrl" {
+            
             handle?.openByUrl(call, result: result)
+            
+        } else if call.method == "getAccessToken" {
+            
+            handle?.getAccessToken(call, result: result)
+            
         }
     }
 }

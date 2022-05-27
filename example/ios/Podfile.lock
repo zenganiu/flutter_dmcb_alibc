@@ -24,7 +24,7 @@ DEPENDENCIES:
   - flutter_dmcb_alibc (from `.symlinks/plugins/flutter_dmcb_alibc/ios`)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - FMDB
     - Masonry
     - Reachability
@@ -48,6 +48,6 @@ SPEC CHECKSUMS:
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
 
-PODFILE CHECKSUM: ce813e8640892ff85fd386500a2edff702bfa19e
+PODFILE CHECKSUM: bdcbb2da11d46637f80ea05ca7a2b7fd1517090c
 
 COCOAPODS: 1.11.2

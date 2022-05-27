@@ -3,9 +3,11 @@ import 'package:flutter/services.dart';
 
 import 'dmcb_alibc_model.dart';
 
+/// 淘宝客插件
 class FlutterDmcbAlibc {
   static const MethodChannel _channel = MethodChannel('flutter_dmcb_alibc');
 
+  /// 获取系统版本
   static Future<String?> get platformVersion async {
     final String? version = await _channel.invokeMethod('getPlatformVersion');
     return version;
@@ -48,7 +50,22 @@ class FlutterDmcbAlibc {
     return model;
   }
 
-  /// 打开商品
+  /// 获取token
+  static Future<DmcbAlibcModel<DmcbAlibcAccessToken>> getAccessToken({
+    required String appKey,
+    required String appName,
+    required String appLogo,
+  }) async {
+    final json = await _channel.invokeMethod('getAccessToken', {
+      'appKey': appKey,
+      'appName': appName,
+      'appLogo': appLogo,
+    });
+    final data = DmcbAlibcModel<DmcbAlibcAccessToken>.formJson(json);
+    return data;
+  }
+
+  /// 通过code打开商品
   ///
   /// [id] 商品id
   /// [pid] 淘客ID
@@ -58,19 +75,28 @@ class FlutterDmcbAlibc {
     required String pid,
     required String relationId,
   }) async {
-    final json = await _channel.invokeMethod<Map>('openByCode', {"id": id, 'pid': pid, 'relationId': relationId});
+    final json = await _channel.invokeMethod<Map>('openByCode', {
+      "id": id,
+      'pid': pid,
+      'relationId': relationId,
+    });
     final model = DmcbAlibcModel.formJson(json);
     return model;
   }
 
+  /// 通过URL打开商品
   static Future<DmcbAlibcModel> openByUrl({
     required String url,
     required String id,
     required String pid,
     required String relationId,
   }) async {
-    final json =
-        await _channel.invokeMethod<Map>('openByUrl', {"url": url, "id": id, 'pid': pid, 'relationId': relationId});
+    final json = await _channel.invokeMethod<Map>('openByUrl', {
+      "url": url,
+      "id": id,
+      'pid': pid,
+      'relationId': relationId,
+    });
     final model = DmcbAlibcModel.formJson(json);
     return model;
   }
