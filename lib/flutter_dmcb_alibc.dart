@@ -21,6 +21,8 @@ class FlutterDmcbAlibc {
   }
 
   /// 授权登录
+  ///
+  /// 若已授权将不会调起淘宝授权，直接返回用户信息
   static Future<DmcbAlibcModel<DmcbAlibcUser>> authLogin() async {
     final json = await _channel.invokeMethod<Map>('authLogin');
     final model = DmcbAlibcModel<DmcbAlibcUser>.formJson(json);
@@ -44,13 +46,14 @@ class FlutterDmcbAlibc {
     return result == true;
   }
 
+  /// 获取授权登录用户信息
   static Future<DmcbAlibcModel<DmcbAlibcUser>> getUserInfo() async {
     final json = await _channel.invokeMethod<Map>('getUserInfo');
     final model = DmcbAlibcModel<DmcbAlibcUser>.formJson(json);
     return model;
   }
 
-  /// 获取token
+  /// TOP授权获取token
   static Future<DmcbAlibcModel<DmcbAlibcAccessToken>> getAccessToken({
     required String appKey,
     required String appName,
@@ -85,6 +88,14 @@ class FlutterDmcbAlibc {
   }
 
   /// 通过URL打开商品
+  ///
+  /// 关于直接打开s.click链接分佣说明
+  /// 百川SDK不支持s.click（或uland）链接的二次转链逻辑，如果采用openByUrl方式打开该类链接，请勿传入pid等分佣参数；
+  /// 若需要使用其他渠道获取的s.click链接进行分佣，可自行去淘客联盟后台生成自己的s.click链接或调用联盟服务接口生成。
+  /// [url] url
+  /// [id] 商品id
+  /// [pid] 淘客ID
+  /// [relationId] 渠道id
   static Future<DmcbAlibcModel> openByUrl({
     required String url,
     required String id,
