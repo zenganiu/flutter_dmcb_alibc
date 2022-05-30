@@ -29,6 +29,25 @@ class FlutterDmcbAlibc {
     return model;
   }
 
+  /// TOP授权获取token
+  ///
+  /// [appKey] appkey
+  /// [appName] 应用名称
+  /// [appLogo] app图标
+  static Future<DmcbAlibcModel<DmcbAlibcAccessToken>> getAccessToken({
+    required String appKey,
+    required String appName,
+    required String appLogo,
+  }) async {
+    final json = await _channel.invokeMethod('getAccessToken', {
+      'appKey': appKey,
+      'appName': appName,
+      'appLogo': appLogo,
+    });
+    final data = DmcbAlibcModel<DmcbAlibcAccessToken>.formJson(json);
+    return data;
+  }
+
   /// 获取Utdid
   static Future<String> getUtdid() async {
     String result = await _channel.invokeMethod("getUtdid");
@@ -46,26 +65,11 @@ class FlutterDmcbAlibc {
     return result == true;
   }
 
-  /// 获取授权登录用户信息
+  /// 已登录时获取授权登录用户信息
   static Future<DmcbAlibcModel<DmcbAlibcUser>> getUserInfo() async {
     final json = await _channel.invokeMethod<Map>('getUserInfo');
     final model = DmcbAlibcModel<DmcbAlibcUser>.formJson(json);
     return model;
-  }
-
-  /// TOP授权获取token
-  static Future<DmcbAlibcModel<DmcbAlibcAccessToken>> getAccessToken({
-    required String appKey,
-    required String appName,
-    required String appLogo,
-  }) async {
-    final json = await _channel.invokeMethod('getAccessToken', {
-      'appKey': appKey,
-      'appName': appName,
-      'appLogo': appLogo,
-    });
-    final data = DmcbAlibcModel<DmcbAlibcAccessToken>.formJson(json);
-    return data;
   }
 
   /// 通过code打开商品
