@@ -46,8 +46,11 @@ public class CustomActivity extends AppCompatActivity {
      */
     public void authLogin() {
         String appKey = mMethodCall.argument("appKey");
+        Log.d("substring", " appKey " + appKey);
         String appName = mMethodCall.argument("appName");
+        Log.d("substring", " appName " + appName);
         String appLogo = mMethodCall.argument("appLogo");
+        Log.d("substring", " appLogo " + appLogo);
         TopAuth.showAuthDialog(CustomActivity.this, R.mipmap.ic_launcher, appName, appKey, new AuthCallback() {
             @Override
             public void onSuccess(String token, String s) {

@@ -68,7 +68,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         } else if (call.method.equals("authLogin")) {
             authLogin(call, result);
         } else if (call.method.equals("getUserInfo")) {
-            getUserInfo(call, result);
+            authLogin(call, result);
         } else if (call.method.equals("logout")) {
             logout();
         } else if (call.method.equals("isLogin")) {
@@ -78,7 +78,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         } else if (call.method.equals("openByUrl")) {
             openDetail(call, result);
         } else if (call.method.equals("getAccessToken")) {
-            getUserInfo(call, result);
+            authLogin(call, result);
         } else {
             result.notImplemented();
         }
