@@ -77,6 +77,8 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
             openDetail(call, result);
         } else if (call.method.equals("openByUrl")) {
             openDetail(call, result);
+        } else if (call.method.equals("getAccessToken")) {
+            getUserInfo(call, result);
         } else {
             result.notImplemented();
         }

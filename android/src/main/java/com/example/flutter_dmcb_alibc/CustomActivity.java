@@ -46,7 +46,9 @@ public class CustomActivity extends AppCompatActivity {
      */
     public void authLogin() {
         String appKey = mMethodCall.argument("appKey");
-        TopAuth.showAuthDialog(CustomActivity.this, R.mipmap.ic_launcher, "魔方黑卡", appKey, new AuthCallback() {
+        String appName = mMethodCall.argument("appName");
+        String appLogo = mMethodCall.argument("appLogo");
+        TopAuth.showAuthDialog(CustomActivity.this, R.mipmap.ic_launcher, appName, appKey, new AuthCallback() {
             @Override
             public void onSuccess(String token, String s) {
                 Map<String, Object> map = AlibcLogin.getInstance().getUserInfo();
