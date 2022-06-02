@@ -18,6 +18,7 @@ import com.alibaba.alibcprotocol.param.AlibcTaokeParams;
 import com.alibaba.alibcprotocol.param.OpenType;
 import com.alibaba.ariver.kernel.common.utils.JSONUtils;
 import com.alibaba.baichuan.trade.common.AlibcTradeCommon;
+import com.alibaba.baichuan.trade.common.utils.AlibcCommonUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.baichuan.nb_trade.AlibcTrade;
@@ -68,7 +69,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         } else if (call.method.equals("authLogin")) {
             authLogin(call, result);
         } else if (call.method.equals("getUserInfo")) {
-            authLogin(call, result);
+            getUserInfo(result);
         } else if (call.method.equals("logout")) {
             logout();
         } else if (call.method.equals("isLogin")) {
@@ -78,10 +79,23 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         } else if (call.method.equals("openByUrl")) {
             openDetail(call, result);
         } else if (call.method.equals("getAccessToken")) {
-            authLogin(call, result);
+            getAccessToken(call, result);
         } else {
             result.notImplemented();
         }
+    }
+
+    /**
+     * 淘宝二次授权
+     *
+     * @param call
+     * @param result
+     */
+    public void getAccessToken(final MethodCall call, final Result result) {
+        CustomActivity.setCallBack(call, result);
+        Intent intent = new Intent(mActivity, CustomActivity.class);
+        intent.putExtra("method", "authLogin");
+        mActivity.startActivity(intent);
     }
 
     /**
@@ -94,11 +108,16 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         AlibcLoginCallback loginCallback = new AlibcLoginCallback() {
             @Override
             public void onSuccess(String uid, String nick) {
-                // 淘宝二次授权
-                CustomActivity.setCallBack(call, result);
-                Intent intent = new Intent(mActivity, CustomActivity.class);
-                intent.putExtra("method", "authLogin");
-                mActivity.startActivity(intent);
+                Map<String, Object> map = AlibcLogin.getInstance().getUserInfo();
+                Log.d("substring", " getUserInfo " + JSON.toJSONString(map));
+                JSONObject mJSONObject = new JSONObject();
+                mJSONObject.put("nick", map.get("nick"));
+                mJSONObject.put("openId", map.get("userId"));
+                JSONObject main = new JSONObject();
+                main.put("code", "00000");
+                main.put("message", "授权成功");
+                main.put("payload", mJSONObject);
+                result.success(main);
             }
 
             @Override
@@ -120,6 +139,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
      */
     public void initialSDK(final Result result) {
         if (BuildConfig.DEBUG) {
+            AlibcCommonUtils.setOpenAnalysisTool(true);
             //开发阶段打开日志开关，方便排查错误信息
             AlibcTradeCommon.turnOnDebug();
             AlibcTradeCommon.openErrorLog();
@@ -166,12 +186,17 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         result.success(utdId);
     }
 
-    private void getUserInfo(@NonNull MethodCall call, @NonNull Result result) {
-        // 淘宝二次授权
-        CustomActivity.setCallBack(call, result);
-        Intent intent = new Intent(mActivity, CustomActivity.class);
-        intent.putExtra("method", "authLogin");
-        mActivity.startActivity(intent);
+    private void getUserInfo(@NonNull Result result) {
+        Map<String, Object> map = AlibcLogin.getInstance().getUserInfo();
+        Log.d("substring", " getUserInfo " + JSON.toJSONString(map));
+        JSONObject mJSONObject = new JSONObject();
+        mJSONObject.put("nick", map.get("nick"));
+        mJSONObject.put("openId", map.get("userId"));
+        JSONObject main = new JSONObject();
+        main.put("code", "00000");
+        main.put("message", "授权成功");
+        main.put("payload", mJSONObject);
+        result.success(main);
     }
 
     private void logout() {
@@ -217,7 +242,8 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         AlibcShowParams showParams = new AlibcShowParams();
         showParams.setOpenType(OpenType.Auto);
         showParams.setClientType("taobao");
-        showParams.setBackUrl("alisdk://");
+        showParams.setBackUrl("szmf://");
+        showParams.setNewWindow(true);
         AlibcTaokeParams alibcTaokeParams = new AlibcTaokeParams(pid);
         alibcTaokeParams.pid = pid;
         alibcTaokeParams.materialSourceUrl = url;
