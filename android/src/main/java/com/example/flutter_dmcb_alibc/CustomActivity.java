@@ -46,8 +46,14 @@ public class CustomActivity extends AppCompatActivity {
      */
     public void authLogin() {
         String appKey = mMethodCall.argument("appKey");
+        if (appKey == null) {
+            appKey = "31528286";
+        }
         Log.d("substring", " appKey " + appKey);
         String appName = mMethodCall.argument("appName");
+        if (appName == null) {
+            appName = "魔方黑卡";
+        }
         Log.d("substring", " appName " + appName);
         String appLogo = mMethodCall.argument("appLogo");
         Log.d("substring", " appLogo " + appLogo);
@@ -62,6 +68,8 @@ public class CustomActivity extends AppCompatActivity {
                 mJSONObject.put("openId", map.get("userId"));
                 mJSONObject.put("openSid", "");
                 mJSONObject.put("topAccessToken", token);
+                mJSONObject.put("accessToken", token);
+                mJSONObject.put("expire", s);
                 mJSONObject.put("topAuthCode", "");
                 mJSONObject.put("expiresIn", s);
 
