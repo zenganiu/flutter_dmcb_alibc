@@ -255,7 +255,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
             if (!url.contains("http")) {
                 url = url.replace("//uland", "http://uland");
             }
-            showParams.setDegradeType(AlibcDegradeType.H5);
+            showParams.setDegradeType(AlibcDegradeType.Download);
             showParams.setDegradeUrl(url);
             AlibcTrade.openByUrl(mActivity, url, showParams, alibcTaokeParams, trackParams, new AlibcTradeCallback() {
                 @Override
@@ -263,7 +263,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
                     Log.d("substring", "openByUrl success: code = " + i);
                     JSONObject mJSONObject = new JSONObject();
                     mJSONObject.put("code", "00000");
-                    mJSONObject.put("message", o.toString());
+                    mJSONObject.put("message", o + "");
                     mJSONObject.put("payload", "");
                     result.success(mJSONObject);
                 }
