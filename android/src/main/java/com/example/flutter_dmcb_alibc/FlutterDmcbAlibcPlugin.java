@@ -287,7 +287,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
                             Log.d("substring", "openByCode success: code = " + i);
                             JSONObject mJSONObject = new JSONObject();
                             mJSONObject.put("code", "00000");
-                            mJSONObject.put("message", o.toString());
+                            mJSONObject.put("message", o + "");
                             mJSONObject.put("payload", "");
                             result.success(mJSONObject);
                         }
