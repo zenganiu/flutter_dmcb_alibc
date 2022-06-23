@@ -80,7 +80,7 @@ class DmcbAlibcAccessToken {
   /// token
   final String? accessToken;
 
-  /// 单位秒
+  /// 失效时间： 单位秒
   final String? expire;
 
   DmcbAlibcAccessToken({this.accessToken, this.expire});

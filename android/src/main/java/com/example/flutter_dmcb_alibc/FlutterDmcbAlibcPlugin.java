@@ -152,6 +152,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         }
         Map<String, Object> params = new HashMap<>();
         params.put("open4GDownload", true);
+        params.put("open5GDownload", true);
         AlibcTradeSDK.asyncInit(mAppContext, params, new AlibcTradeInitCallback() {
             @Override
             public void onSuccess() {
@@ -226,17 +227,19 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
      * @param result
      */
     public synchronized void openDetail(MethodCall call, MethodChannel.Result result) {
-        Log.d("substring", "openDetail");
         String id = call.argument("id");
         String pid = call.argument("pid");
         String relationId = call.argument("relationId");
         String url = call.argument("url");
-
+        Log.d("substring", "openDetail" + id);
+        Log.d("substring", "openDetail" + pid);
+        Log.d("substring", "openDetail" + relationId);
+        Log.d("substring", "openDetail" + url);
         AlibcBizParams alibcBizParams = new AlibcBizParams();
         // 其他业务参数
         HashMap<String, String> extMap = new HashMap<>();
         // 设置直播间id（此时不要设置商品id）
-        extMap.put("id", id);
+//        extMap.put("id", id);
         alibcBizParams.setId(id);
         alibcBizParams.setExtParams(extMap);
         AlibcShowParams showParams = new AlibcShowParams();
@@ -255,7 +258,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
             if (!url.contains("http")) {
                 url = url.replace("//uland", "http://uland");
             }
-            showParams.setDegradeType(AlibcDegradeType.H5);
+            showParams.setDegradeType(AlibcDegradeType.Download);
             showParams.setDegradeUrl(url);
             AlibcTrade.openByUrl(mActivity, url, showParams, alibcTaokeParams, trackParams, new AlibcTradeCallback() {
                 @Override
@@ -263,7 +266,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
                     Log.d("substring", "openByUrl success: code = " + i);
                     JSONObject mJSONObject = new JSONObject();
                     mJSONObject.put("code", "00000");
-                    mJSONObject.put("message", o.toString());
+                    mJSONObject.put("message", o + "");
                     mJSONObject.put("payload", "");
                     result.success(mJSONObject);
                 }
@@ -287,7 +290,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
                             Log.d("substring", "openByCode success: code = " + i);
                             JSONObject mJSONObject = new JSONObject();
                             mJSONObject.put("code", "00000");
-                            mJSONObject.put("message", o.toString());
+                            mJSONObject.put("message", o + "");
                             mJSONObject.put("payload", "");
                             result.success(mJSONObject);
                         }
