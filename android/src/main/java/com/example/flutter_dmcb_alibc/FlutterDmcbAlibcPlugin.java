@@ -153,6 +153,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         Map<String, Object> params = new HashMap<>();
         params.put("open4GDownload", true);
         params.put("open5GDownload", true);
+        AlibcCommonUtils.setOpenAnalysisTool(true);
         AlibcTradeSDK.asyncInit(mAppContext, params, new AlibcTradeInitCallback() {
             @Override
             public void onSuccess() {
@@ -220,6 +221,27 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
         result.success(isLogin);
     }
 
+
+    void test() throws Exception {
+    }
+
+    void mainError() {
+        test();
+    }
+
+    void main() throws Exception {
+        test();
+    }
+
+    void main1() {
+        try {
+            test();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+
     /**
      * 开启淘宝商品对应页
      *
@@ -242,6 +264,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
 //        extMap.put("id", id);
         alibcBizParams.setId(id);
         alibcBizParams.setExtParams(extMap);
+
         AlibcShowParams showParams = new AlibcShowParams();
         showParams.setOpenType(OpenType.Auto);
         showParams.setClientType("taobao");
