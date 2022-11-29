@@ -222,26 +222,6 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
     }
 
 
-    void test() throws Exception {
-    }
-
-    void mainError() {
-        test();
-    }
-
-    void main() throws Exception {
-        test();
-    }
-
-    void main1() {
-        try {
-            test();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
     /**
      * 开启淘宝商品对应页
      *
