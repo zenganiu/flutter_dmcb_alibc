@@ -121,8 +121,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   void openByCode() async {
+    const id = 'm726WXnfktZQJVohzj6tQC3-zD03ZyKIWQzMy92nTJ';
+    // final id = '668413008263';
     final res = await FlutterDmcbAlibc.openByCode(
-      id: '668413008263',
+      id: id,
       pid: 'mm_1460680056_2101550125_110951050292',
       relationId: '2763056884',
     );
