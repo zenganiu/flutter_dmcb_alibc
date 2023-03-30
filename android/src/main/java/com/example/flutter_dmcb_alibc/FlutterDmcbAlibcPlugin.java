@@ -191,7 +191,7 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
     private void getUserInfo(@NonNull Result result) {
         Map<String, Object> map = AlibcLogin.getInstance().getUserInfo();
         Log.d("substring", " getUserInfo " + JSON.toJSONString(map));
-        if (map.isEmpty()) {
+        if (map == null) {
             map = new HashMap<>();
         }
         JSONObject mJSONObject = new JSONObject();
