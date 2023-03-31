@@ -191,6 +191,14 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
     private void getUserInfo(@NonNull Result result) {
         Map<String, Object> map = AlibcLogin.getInstance().getUserInfo();
         Log.d("substring", " getUserInfo " + JSON.toJSONString(map));
+        if (map == null) {
+            JSONObject main = new JSONObject();
+            main.put("code", "00000");
+            main.put("message", "授权成功");
+            main.put("payload", null);
+            result.success(main);
+            return;
+        }
         JSONObject mJSONObject = new JSONObject();
         mJSONObject.put("nick", map.get("nick"));
         mJSONObject.put("openId", map.get("userId"));
@@ -286,28 +294,27 @@ public class FlutterDmcbAlibcPlugin implements FlutterPlugin, MethodCallHandler,
             });
         } else {
             String codeDetail = "suite://bc.suite.basic/bc.template.detail";
-            AlibcTrade.openByCode(mActivity, codeDetail, alibcBizParams, showParams,
-                    alibcTaokeParams, trackParams, new AlibcTradeCallback() {
-                        @Override
-                        public void onSuccess(int i, Object o) {
-                            Log.d("substring", "openByCode success: code = " + i);
-                            JSONObject mJSONObject = new JSONObject();
-                            mJSONObject.put("code", "00000");
-                            mJSONObject.put("message", o + "");
-                            mJSONObject.put("payload", "");
-                            result.success(mJSONObject);
-                        }
+            AlibcTrade.openByCode(mActivity, codeDetail, alibcBizParams, showParams, alibcTaokeParams, trackParams, new AlibcTradeCallback() {
+                @Override
+                public void onSuccess(int i, Object o) {
+                    Log.d("substring", "openByCode success: code = " + i);
+                    JSONObject mJSONObject = new JSONObject();
+                    mJSONObject.put("code", "00000");
+                    mJSONObject.put("message", o + "");
+                    mJSONObject.put("payload", "");
+                    result.success(mJSONObject);
+                }
 
-                        @Override
-                        public void onFailure(int i, String s) {
-                            Log.d("substring", "openByCode fail: code = " + i + ", msg = " + s);
-                            JSONObject mJSONObject = new JSONObject();
-                            mJSONObject.put("code", i);
-                            mJSONObject.put("message", s);
-                            mJSONObject.put("payload", "");
-                            result.success(mJSONObject);
-                        }
-                    });
+                @Override
+                public void onFailure(int i, String s) {
+                    Log.d("substring", "openByCode fail: code = " + i + ", msg = " + s);
+                    JSONObject mJSONObject = new JSONObject();
+                    mJSONObject.put("code", i);
+                    mJSONObject.put("message", s);
+                    mJSONObject.put("payload", "");
+                    result.success(mJSONObject);
+                }
+            });
         }
     }
 
