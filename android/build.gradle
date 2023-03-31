@@ -58,7 +58,6 @@ android {
     buildTypes {
         debug {
             minifyEnabled false
-            useProguard false
             shrinkResources false
             signingConfig signingConfigs.debug
 //            ndk {
@@ -67,7 +66,6 @@ android {
         }
         release {
             minifyEnabled false
-            useProguard false
             shrinkResources false
             signingConfig signingConfigs.release
 //            ndk {
