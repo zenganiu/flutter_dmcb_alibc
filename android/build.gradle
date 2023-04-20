@@ -83,25 +83,30 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
 //    //联盟电商基础链路套件
-//    implementation(name: 'alibcapplink-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibcextend-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibcad-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibclogin-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibcnbtrade-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibcprotocol-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibctradecommon-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibctriver_live-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibctriver-5.0.0.32', ext: 'aar')
-//    implementation(name: 'alibcwebview-5.0.0.32', ext: 'aar')
-//
-//    implementation(name: 'MiddleTierSDK-external-release-5.5.24-preInstall', ext: 'aar')
-//    implementation(name: 'MiscSDK-external-release-5.5.9-preInstall', ext: 'aar')
-//    implementation(name: 'NoCaptchaSDK-external-release-5.5.8-preInstall', ext: 'aar')
-//    implementation(name: 'SecurityBodySDK-external-release-5.5.28-preInstall', ext: 'aar')
-//    implementation(name: 'SecurityGuardSDK-external-release-5.5.22-preInstall', ext: 'aar')
+    implementation(name: 'alibcad-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibcapplink-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibcauth-5.0.1.0', ext: 'aar')
+    implementation(name: 'alibcextend-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibclogin-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibcnbtrade-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibcprotocol-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibctradecommon-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibctriver-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibctriver_live-5.0.1.5', ext: 'aar')
+    implementation(name: 'alibcwebview-5.0.1.5', ext: 'aar')
+
+    implementation(name: 'MiddleTierSDK-external-release-5.5.110-preInstall', ext: 'aar')
+    implementation(name: 'MiscSDK-external-release-5.5.9-preInstall', ext: 'aar')
+    implementation(name: 'NoCaptchaSDK-external-release-5.5.8-preInstall', ext: 'aar')
+    implementation(name: 'SecurityBodySDK-external-release-5.5.110-preInstall', ext: 'aar')
+    implementation(name: 'SecurityGuardSDK-external-release-5.5.110-preInstall', ext: 'aar')
+
+    implementation(name: 'cpp_shared-0.0.3', ext: 'aar')
+    implementation(name: 'triver_tlog-1.0.8.5-bc-7-2', ext: 'aar')
+    implementation(name: 'triver_tlognative-1.0.8.5-bc-7-2', ext: 'aar')
 
     implementation "com.alibaba:fastjson:1.2.72"
     implementation "com.immomo.cosmos.baseutil:cpp_shared:r17c@aar"
