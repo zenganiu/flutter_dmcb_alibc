@@ -1,6 +1,6 @@
-# `flutter_dmcb_alibc`
-
-百川电商SDK Flutter插件.
+# flutter_dmcb_alibc
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/zenganiu/flutter_dmcb_alibc)
+## **百川电商SDK Flutter插件**
 
 ## 安装
 在 `pubspec.yaml` 中添加
